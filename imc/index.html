@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="appContainer">
+      <h2 class="titleText"> Cálculo IMC </h2>
+      <p class="descriptionText"> 
+        IMC é a sigla para Índice de Massa Corpórea, 
+        parâmetro adotado pela Organização Mundial 
+        de Saúde para calcular o peso ideal de cada 
+        pessoa. 
+      </p>
+
+      <form class="formImcContainer">
+        <div class="inputsDataContainer">
+          <div class="inputContainer">
+            <lable class="labelText"> Altura (ex: 180cm): </lable>
+            <input type="text" class="input" id="inputHeight" />
+          </div>
+  
+          <div class="inputContainer">
+            <lable class="labelText"> Peso (ex: 72.5Kg): </lable>
+            <input type="text" class="input" id="inputWeight" />
+          </div>
+        </div>
+
+        <button class="btnContainer" id="buttonCalcIMC">
+          Calcular
+        </button>
+      </form>
+
+      <div class="imcResultContainer">
+        <h4> SEU IMC: </h4>
+        <span id="resultIMC"> ... </span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="index.js"></script>
+
+</body>
+</html>

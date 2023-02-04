@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Clock </title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="appContainer">
+      <div class="clockContainer">
+        <div class="cardClockContainer">
+          <div class="cardTimeContainer">
+            <span id="hours"> 00 </span>
+          </div>
+
+          <h5 class="cardTimeText"> Horas </h5>
+        </div>
+
+        <div class="cardClockContainer">
+          <div class="cardTimeContainer">
+            <span id="minuts"> 00 </span>
+          </div>
+
+          <h5 class="cardTimeText"> Minutos </h5>
+        </div>
+
+        <div class="cardClockContainer">
+          <div class="cardTimeContainer">
+            <span id="seconds"> 00 </span>
+          </div>
+
+          <h5 class="cardTimeText"> Segundos </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const getHours = document.querySelector('#hours');
+    const getMinuts = document.querySelector('#minuts');
+    const getSeconds = document.querySelector('#seconds');
+
+    window.addEventListener('load', () => {
+      let date = new Date();
+
+      getHours.innerHTML = `${date.getHours()}`.padStart(2, '0');
+      getMinuts.innerHTML = `${date.getMinutes()}`.padStart(2 ,'0');
+      getSeconds.innerHTML = `${date.getSeconds()}`.padStart(2 ,'0');
+    })
+    
+    function updateClock() {
+      let date = new Date();
+
+      getHours.innerHTML = `${date.getHours()}`.padStart(2, '0');
+      getMinuts.innerHTML = `${date.getMinutes()}`.padStart(2 ,'0');
+      getSeconds.innerHTML = `${date.getSeconds()}`.padStart(2 ,'0');
+    };
+
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
